@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qLp-JN-3jt">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="EntryViewController" customModule="Wysa_Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlx-76-ROE">
+                                <rect key="frame" x="16" y="577" width="361" height="55"/>
+                                <accessibility key="accessibilityConfiguration" hint="Takes you to Fresh new Quiz" label="Start Quiz Button">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ubd-9c-VXw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" imagePlacement="trailing" title="Lets Start" cornerStyle="capsule">
+                                    <imageReference key="image" image="arrowshape.right.fill" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="3sH-wl-EfU" kind="show" id="W1U-JU-h9R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONw-ax-bhD">
+                                <rect key="frame" x="16" y="103" width="361" height="334"/>
+                                <accessibility key="accessibilityConfiguration" hint="A quote for inspiring user" label="Today's inspirational quote"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="334" id="mlL-26-ggw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ONw-ax-bhD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EMT-GU-Inf"/>
+                            <constraint firstItem="ONw-ax-bhD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TBT-Np-WfC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ONw-ax-bhD" secondAttribute="trailing" constant="16" id="Xm0-nW-0zh"/>
+                            <constraint firstItem="rlx-76-ROE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eYU-PI-Q1e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rlx-76-ROE" secondAttribute="bottom" constant="186" id="kdX-ej-Yjd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rlx-76-ROE" secondAttribute="trailing" constant="16" id="rlP-uF-83A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="bcW-W6-8YG"/>
+                    <connections>
+                        <outlet property="quoteLbl" destination="ONw-ax-bhD" id="1G8-G9-a2I"/>
+                        <outlet property="startBtn" destination="rlx-76-ROE" id="Wq0-wX-7M5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="8ap-bZ-2kw">
+            <objects>
+                <viewController id="3sH-wl-EfU" customClass="QuizViewController" customModule="Wysa_Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1o5-ZQ-AX6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uX-pJ-hHO">
+                                <rect key="frame" x="136" y="103" width="100" height="18"/>
+                                <accessibility key="accessibilityConfiguration" hint="Displays user's current number of correct answers in quiz question" label="User's Current Score"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DPP-OD-2Wi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="zZi-lp-8Sd">
+                                <rect key="frame" x="16" y="781" width="361" height="4"/>
+                                <accessibility key="accessibilityConfiguration" hint="visually shows current progress of the ongoing Quiz" label="Current progress in quiz"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="cHw-U0-yKw"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo9-vM-DtA">
+                                <rect key="frame" x="16" y="499" width="361" height="55"/>
+                                <accessibility key="accessibilityConfiguration" hint="Button for option 1" label="Quiz Option 1">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="sou-fk-sw7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Choice 1"/>
+                                <connections>
+                                    <action selector="ansBtnPressed:" destination="3sH-wl-EfU" eventType="touchUpInside" id="s7k-NA-PdK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCA-e5-tlR">
+                                <rect key="frame" x="16" y="562" width="361" height="55"/>
+                                <accessibility key="accessibilityConfiguration" hint="Button for option 2" label="Quiz Option 2">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="JFx-yq-hp2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Choice 2"/>
+                                <connections>
+                                    <action selector="ansBtnPressed:" destination="3sH-wl-EfU" eventType="touchUpInside" id="oUg-aQ-bIi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du4-UO-a8x">
+                                <rect key="frame" x="16" y="625" width="361" height="55"/>
+                                <accessibility key="accessibilityConfiguration" hint="Button for option 3" label="Quiz Option 3">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="uFm-wW-9qC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Choice 3"/>
+                                <connections>
+                                    <action selector="ansBtnPressed:" destination="3sH-wl-EfU" eventType="touchUpInside" id="oLb-WP-6Ob"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uci-Bd-474">
+                                <rect key="frame" x="16" y="688" width="361" height="55"/>
+                                <accessibility key="accessibilityConfiguration" hint="Button for option 4" label="Quiz Option 4">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="SV8-LB-8OZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Choice 4"/>
+                                <connections>
+                                    <action selector="ansBtnPressed:" destination="3sH-wl-EfU" eventType="touchUpInside" id="Ifa-WD-9kT"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ujz-Ug-f7a">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching fresh Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4c-lE-Tgo">
+                                <rect key="frame" x="87" y="384" width="219" height="24"/>
+                                <accessibility key="accessibilityConfiguration" hint="Wait till questions get loaded" label="Loading Please Wait"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="fLb-Jf-Dxe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gst-ro-xGU">
+                                <rect key="frame" x="136.33333333333334" y="146" width="120.33333333333334" height="345"/>
+                                <accessibility key="accessibilityConfiguration" hint="Current question form Quiz" label="Quiz Question"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="345" id="bD6-0m-ez7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5Y-MB-fpw">
+                                <rect key="frame" x="16" y="103" width="89" height="35"/>
+                                <accessibility key="accessibilityConfiguration" hint="Button for navigating to previous Question " label="Navigate to previous Question">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="uxK-sV-BCK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" imagePlacement="leading">
+                                    <imageReference key="image" image="arrowshape.left.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="navigatingQuePressed:" destination="3sH-wl-EfU" eventType="touchUpInside" id="o1h-mq-okx"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShG-KL-Fuv">
+                                <rect key="frame" x="268" y="103" width="109" height="35"/>
+                                <accessibility key="accessibilityConfiguration" hint="Button for navigating to Next Question" label="Navigate to Next Question">
+                                    <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="1ZS-Gr-gzZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" imagePlacement="trailing">
+                                    <imageReference key="image" image="arrowshape.right.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="navigatingQuePressed:" destination="3sH-wl-EfU" eventType="touchUpInside" id="Bth-6H-ana"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ycR-gU-YjM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xo9-vM-DtA" firstAttribute="top" secondItem="Gst-ro-xGU" secondAttribute="bottom" constant="8" symbolic="YES" id="0et-GP-7pf"/>
+                            <constraint firstItem="f5Y-MB-fpw" firstAttribute="top" secondItem="ycR-gU-YjM" secondAttribute="top" id="0xm-wR-8xx"/>
+                            <constraint firstItem="Gst-ro-xGU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ycR-gU-YjM" secondAttribute="leading" id="2Ik-QF-TT4"/>
+                            <constraint firstItem="du4-UO-a8x" firstAttribute="leading" secondItem="ycR-gU-YjM" secondAttribute="leading" constant="16" id="2gr-E5-Ivg"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="trailing" secondItem="xo9-vM-DtA" secondAttribute="trailing" constant="16" id="3N1-6s-mQk"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gst-ro-xGU" secondAttribute="trailing" id="4eH-BU-mCC"/>
+                            <constraint firstItem="Gst-ro-xGU" firstAttribute="centerX" secondItem="1o5-ZQ-AX6" secondAttribute="centerX" id="7eX-UV-Dvn"/>
+                            <constraint firstItem="uci-Bd-474" firstAttribute="top" secondItem="du4-UO-a8x" secondAttribute="bottom" constant="8" symbolic="YES" id="80e-R6-NwL"/>
+                            <constraint firstItem="f5Y-MB-fpw" firstAttribute="leading" secondItem="ycR-gU-YjM" secondAttribute="leading" constant="16" id="8HA-r2-byp"/>
+                            <constraint firstItem="DCA-e5-tlR" firstAttribute="leading" secondItem="ycR-gU-YjM" secondAttribute="leading" constant="16" id="9Mq-lx-lF3"/>
+                            <constraint firstItem="uci-Bd-474" firstAttribute="leading" secondItem="ycR-gU-YjM" secondAttribute="leading" constant="16" id="A5w-ue-KQ8"/>
+                            <constraint firstItem="du4-UO-a8x" firstAttribute="top" secondItem="DCA-e5-tlR" secondAttribute="bottom" constant="8" symbolic="YES" id="Blq-9Q-ipo"/>
+                            <constraint firstItem="xo9-vM-DtA" firstAttribute="leading" secondItem="ycR-gU-YjM" secondAttribute="leading" constant="16" id="HoA-0E-Veh"/>
+                            <constraint firstItem="F4c-lE-Tgo" firstAttribute="top" secondItem="ShG-KL-Fuv" secondAttribute="bottom" constant="246" id="Itz-nf-uxc"/>
+                            <constraint firstItem="zZi-lp-8Sd" firstAttribute="top" secondItem="uci-Bd-474" secondAttribute="bottom" constant="38" id="JiX-n7-TLt"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="trailing" secondItem="uci-Bd-474" secondAttribute="trailing" constant="16" id="KBr-DN-1DO"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="trailing" secondItem="DCA-e5-tlR" secondAttribute="trailing" constant="16" id="N71-Nb-P0g"/>
+                            <constraint firstItem="ujz-Ug-f7a" firstAttribute="centerY" secondItem="1o5-ZQ-AX6" secondAttribute="centerY" id="OKv-TA-liP"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="bottom" secondItem="zZi-lp-8Sd" secondAttribute="bottom" constant="33" id="QIu-fk-RUb"/>
+                            <constraint firstItem="DCA-e5-tlR" firstAttribute="top" secondItem="xo9-vM-DtA" secondAttribute="bottom" constant="8" symbolic="YES" id="Rl2-9u-Vug"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="trailing" secondItem="du4-UO-a8x" secondAttribute="trailing" constant="16" id="V5U-O1-agt"/>
+                            <constraint firstItem="0uX-pJ-hHO" firstAttribute="leading" secondItem="f5Y-MB-fpw" secondAttribute="trailing" constant="31" id="VpC-JK-3V0"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="trailing" secondItem="zZi-lp-8Sd" secondAttribute="trailing" constant="16" id="bGo-SZ-jDI"/>
+                            <constraint firstItem="F4c-lE-Tgo" firstAttribute="top" secondItem="f5Y-MB-fpw" secondAttribute="bottom" constant="246" id="bde-5A-U02"/>
+                            <constraint firstItem="F4c-lE-Tgo" firstAttribute="centerX" secondItem="1o5-ZQ-AX6" secondAttribute="centerX" id="bnu-9h-zHV"/>
+                            <constraint firstItem="zZi-lp-8Sd" firstAttribute="top" secondItem="uci-Bd-474" secondAttribute="bottom" constant="38" id="kab-dR-9bf"/>
+                            <constraint firstItem="0uX-pJ-hHO" firstAttribute="top" secondItem="ycR-gU-YjM" secondAttribute="top" id="lWH-Rf-cHs"/>
+                            <constraint firstItem="ycR-gU-YjM" firstAttribute="trailing" secondItem="ShG-KL-Fuv" secondAttribute="trailing" constant="16" id="rqe-8E-CZh"/>
+                            <constraint firstItem="ShG-KL-Fuv" firstAttribute="top" secondItem="ycR-gU-YjM" secondAttribute="top" id="seH-Nc-4db"/>
+                            <constraint firstItem="zZi-lp-8Sd" firstAttribute="leading" secondItem="ycR-gU-YjM" secondAttribute="leading" constant="16" id="xN3-Tg-MCh"/>
+                            <constraint firstItem="ujz-Ug-f7a" firstAttribute="centerX" secondItem="1o5-ZQ-AX6" secondAttribute="centerX" id="xqZ-D6-7TV"/>
+                            <constraint firstItem="ShG-KL-Fuv" firstAttribute="leading" secondItem="0uX-pJ-hHO" secondAttribute="trailing" constant="32" id="y13-dJ-NMX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6OT-vV-Y2P"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ujz-Ug-f7a" id="Be9-va-hms"/>
+                        <outlet property="ansBtn1" destination="xo9-vM-DtA" id="47L-fJ-pDe"/>
+                        <outlet property="ansBtn2" destination="DCA-e5-tlR" id="pRz-vt-Z1r"/>
+                        <outlet property="ansBtn3" destination="du4-UO-a8x" id="fIO-87-R7X"/>
+                        <outlet property="ansBtn4" destination="uci-Bd-474" id="jK9-my-CRu"/>
+                        <outlet property="loadingLbl" destination="F4c-lE-Tgo" id="rUP-Sk-2Ft"/>
+                        <outlet property="nextBtn" destination="ShG-KL-Fuv" id="f5N-Ez-kfP"/>
+                        <outlet property="previousBtn" destination="f5Y-MB-fpw" id="gPq-LP-JV9"/>
+                        <outlet property="questionText" destination="Gst-ro-xGU" id="ETc-iz-nTZ"/>
+                        <outlet property="scoreLbl" destination="0uX-pJ-hHO" id="Xqk-oK-Eac"/>
+                        <outlet property="scoreProgress" destination="zZi-lp-8Sd" id="8sW-JS-bmt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFs-8s-wwe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1991.6030534351144" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qi6-v4-M6V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qLp-JN-3jt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hct-mg-5Qw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="udr-UG-fXd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WS-Cg-z1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
