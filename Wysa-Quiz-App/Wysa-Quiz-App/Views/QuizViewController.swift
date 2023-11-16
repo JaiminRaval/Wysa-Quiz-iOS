@@ -429,28 +429,3 @@ class QuizViewController: UIViewController, QuizModelDelegate {
 
 
 
-
-//  logic is wrong for completion of quiz, Fix it ☑️
-//  Testing of VoiceOver(fixing any implemetation) ☑️
-//  fixing wierd  signs like &#0239; in data from API ☑️
-//  adding combine
-//  cleaning all unnecessary code, comments and refactoring code ☑️
-
-//  locking all other buttons when one btn is pressed ☑️
-//  recheck MVVM structure ☑️
-//  rename the app? ☑️
-//  what to do about API falling? ☑️
-//  check how many answers are there so we can display only that much buttons ☑️
-//  fix previous navigation button workings ☑️
-//  touch area is too low for nav button ☑️
-//  handle correct answer with green fill and else with red fill ☑️
-//  how to give haptic feeback on correct answer ☑️
-//  no repetation of score should happen, persist the user choice in a Set ☑️
-//  fixing Fatal error: Index out of range at the ends of nav buttons ☑️
-//  fixing autolayout of all buttons(specially nav buttons) ☑️
-//  Check that action sheet is showing on last que only ☑️
-//  Implementing reset button ☑️
-//  adding animations ☑️
-//  design icon for app ☑️
-//  design and implement LauncScreen ☑️
-//
